@@ -1,0 +1,31 @@
+class Solution {
+    public String addBinary(String a, String b) {
+        
+		 int la=a.length();
+		 int lb=b.length();
+		  String result="";
+		  int carry=0;
+		
+		 int m=0;
+		while(m<la||m<lb||carry!=0) {
+			 int x=0;
+			 if (m<la&&a.charAt(la-1-m) == '1') {
+				 
+				 x=1;
+			 } 
+			 int y=0;
+			 if (m<lb&&b.charAt(lb-1-m) == '1') 
+			 {
+				 y=1;
+			 }
+				 
+				
+			
+			 result=(x+y+carry)%2 + result;
+			 carry=(x+y+carry)/2;				 			
+			 m++;			
+			}
+		
+	        return result;
+    }
+}
