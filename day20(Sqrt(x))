@@ -1,0 +1,14 @@
+class Solution {
+    public int mySqrt(int x) {
+        
+	long i=1;
+	long s=i*i;
+	while (s<=x) {
+				i++;
+
+		s=i*i;
+		
+	}
+	return (int)i-1;
+    }
+}
